@@ -39,3 +39,15 @@ This file is only the bot through, to actually use the bot you will have to foll
 Will begin the processs, **however** make sure to change the directory in line 23 to the location you want your pdfs to be stored. 
 
 dataslap's code found on the site is much better than mine, but I just learned how to use scrapy just yesterday and this was a fun little project to do.
+
+## converttomp3.py
+
+### Pretty self explanatory, converts all ogg files in directory to mp3.
+
+Spotify can't recognized .ogg files when turning them to local files so this will have to do.
+
+## moveMusic.py
+
+### Because why not.
+
+I had the soundtracks of video game To The Moon and Finding Paradise in the same directory, this was a quick way to sort them.
