@@ -51,3 +51,14 @@ Spotify can't recognized .ogg files when turning them to local files so this wil
 ### Because why not.
 
 I had the soundtracks of video game To The Moon and Finding Paradise in the same directory, this was a quick way to sort them.
+
+## get_katawa.py
+
+### Probably one of the best video game soundtracks out there
+
+I had the urge to get Katawa's soundtrack into spotify
+
+## add_album_art.py
+### But looking at blank music files is boring
+
+Adds a specific picture into the music file.
