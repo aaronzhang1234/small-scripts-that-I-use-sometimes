@@ -1,7 +1,6 @@
 # Important scripts that I may use sometimes when it is necessary
 
 ## makefolders.sh
-
 ### For those who prefer being complicated
 
 To make your computer a labyrinth that no one can navigate, use this bash script to create 100 folders in the current directory with their only form of identification being a number between 1 and 100.
@@ -9,7 +8,6 @@ To make your computer a labyrinth that no one can navigate, use this bash script
 Perfect for hiding your documents when no one around you knows how to use grep or anyother commands.
 
 ## synchronize.py and synchronizeEx.json
-
 ### Keeping backups without needing the internet
 
 I have a USB drive which I keep some of my most valuable files on it. 
@@ -27,7 +25,6 @@ That being said, it's very hard and annoying to copy and paste everything using 
 In synchonizeEx.json, folder1 is the source folder while folder2 is the destination folder. I made a time value so that it'll only copy items made after the last copy, don't worry about putting some arbitrary time at first, just put the folders in and you'll be good.
 
 ## metCrawler.py
-
 ### Knowledge is power, but also is showing people your collection of 400 art related books
 
 Inspired by [dataslap's post](https://news.ycombinator.com/item?id=16303046) on news.ycombinator.com, I decided to make my own scrapy bot to download the 22 gigabyte treasure trove that the MET released.
@@ -41,19 +38,16 @@ Will begin the processs, **however** make sure to change the directory in line 2
 dataslap's code found on the site is much better than mine, but I just learned how to use scrapy just yesterday and this was a fun little project to do.
 
 ## converttomp3.py
-
 ### Pretty self explanatory, converts all ogg files in directory to mp3.
 
 Spotify can't recognized .ogg files when turning them to local files so this will have to do.
 
 ## moveMusic.py
-
 ### Because why not.
 
 I had the soundtracks of video game To The Moon and Finding Paradise in the same directory, this was a quick way to sort them.
 
 ## get_katawa.py
-
 ### Probably one of the best video game soundtracks out there
 
 I had the urge to get Katawa's soundtrack into spotify
@@ -62,3 +56,14 @@ I had the urge to get Katawa's soundtrack into spotify
 ### But looking at blank music files is boring
 
 Adds a specific picture into the music file.
+
+#arxivGatherer.py
+### Academic papers are kinda worthless but it's still worthwhile to read them.
+
+Downloads academic articles from arxiv using their API.
+
+TODO
+
+*Only get articles, relating to current date.
+*Kobo Integration
+

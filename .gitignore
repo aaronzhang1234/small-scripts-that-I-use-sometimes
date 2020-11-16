@@ -1,2 +1,6 @@
 emojicrawler/env/*
 env/
+pdfs/
+*.xml
+.vscode
+
