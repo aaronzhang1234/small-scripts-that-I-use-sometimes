@@ -57,13 +57,16 @@ I had the urge to get Katawa's soundtrack into spotify
 
 Adds a specific picture into the music file.
 
-#arxivGatherer.py
+## arxivGatherer.py
 ### Academic papers are kinda worthless but it's still worthwhile to read them.
 
 Downloads academic articles from arxiv using their API.
 
+Since Arxiv adds a multitude of papers a day, we have a json file which keeps track of which was the last paper you downloaded. 
+
 TODO
 
-*Only get articles, relating to current date.
+~~Only get articles, relating to current date.~~
+
 *Kobo Integration
 
