@@ -6,7 +6,7 @@ from datetime import date,datetime
 import json
 
 
-max_results = 10
+max_results = str(10)
 
 raw_data = open("arxiv.json").read()
 json_data = json.loads(raw_data)
