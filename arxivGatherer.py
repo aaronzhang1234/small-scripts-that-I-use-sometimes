@@ -5,6 +5,9 @@ import time
 from datetime import date,datetime
 import json
 
+
+max_results = 10
+
 raw_data = open("arxiv.json").read()
 json_data = json.loads(raw_data)
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
@@ -13,7 +16,7 @@ for category in list_of_categories:
     category_path = "./pdfs/"+category
     if not os.path.isdir(category_path):
         os.makedirs(category_path)
-    url = "http://export.arxiv.org/api/query?search_query=cat:"+category+"&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending"
+    url = "http://export.arxiv.org/api/query?search_query=cat:"+category+"&start=0&max_results="+max_results+"&sortBy=submittedDate&sortOrder=descending"
     data = urllib.request.urlopen(url).read()
 
     print("Retrieving " + category)
