@@ -17,9 +17,10 @@ for category in list_of_categories:
     data = urllib.request.urlopen(url).read()
 
     print("Retrieving " + category)
-    with open("arxiv_"+category+".xml", "w") as arxiv:
+    arxiv_xml_name = "arxiv_"+category+".xml"
+    with open(arxiv_xml_name, "w") as arxiv:
         arxiv.write(data.decode("utf-8"))
-    tree = ET.parse("arxiv_"+category+".xml")
+    tree = ET.parse(arxiv_xml_name)
     root = tree.getroot()
     entries = root.findall('{http://www.w3.org/2005/Atom}entry')
     entry_delimiter = json_data[category]
@@ -48,5 +49,7 @@ for category in list_of_categories:
         time.sleep(4)
     json_data[category] = first_id
     time.sleep(4) 
+    if os.path.exists(arxiv_xml_name):
+        os.remove(arxiv_xml_name)
 with open("arxiv.json","w") as jsonFile:
     json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
