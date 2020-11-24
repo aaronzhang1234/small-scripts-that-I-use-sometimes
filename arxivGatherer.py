@@ -1,6 +1,6 @@
 import urllib.request 
 import xml.etree.ElementTree as ET
-import os
+import os 
 import time
 from datetime import date,datetime
 import json
@@ -11,6 +11,7 @@ max_results = str(10)
 raw_data = open("arxiv.json").read()
 json_data = json.loads(raw_data)
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
+json_data["last_updated"]=str(datetime.now())
 
 for category in list_of_categories:
     category_path = "./pdfs/"+category
@@ -40,9 +41,6 @@ for category in list_of_categories:
 
         title_element = entry.findall('{http://www.w3.org/2005/Atom}title')
         paper_title = title_element[0].text
-
-        published_element = entry.findall('{http://www.w3.org/2005/Atom}published')        
-        published_date = datetime.fromisoformat(published_element[0].text[:-1])
 
         pdf_element = entry.findall('{http://www.w3.org/2005/Atom}link[@title="pdf"]')
         pdf_url = pdf_element[0].attrib.get("href")
