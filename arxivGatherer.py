@@ -4,55 +4,100 @@ import os
 import time
 from datetime import date,datetime
 import json
-
-
-max_results = str(10)
-
-json_path = "arxiv.json"
-raw_data = open(json_path).read()
-json_data = json.loads(raw_data)
+from PyPDF2 import PdfFileReader, PdfFileWriter
 
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
-json_data["last_updated"]=str(datetime.now())
+json_path = "arxiv.json"
 
-for category in list_of_categories:
-    category_path = "./pdfs/"+category
-    if not os.path.isdir(category_path):
-        os.makedirs(category_path)
-    url = "http://export.arxiv.org/api/query?search_query=cat:"+category+"&start=0&max_results="+max_results+"&sortBy=submittedDate&sortOrder=descending"
-    data = urllib.request.urlopen(url).read()
+def retrieve_xml_children(root, child_element):
+    xpath_search = "{http://www.w3.org/2005/Atom}"+child_element
+    return root.findall(xpath_search)
 
-    print("Retrieving " + category)
-    arxiv_xml_name = "arxiv_"+category+".xml"
-    with open(arxiv_xml_name, "w") as arxiv:
-        arxiv.write(data.decode("utf-8"))
-    tree = ET.parse(arxiv_xml_name)
-    root = tree.getroot()
-    entries = root.findall('{http://www.w3.org/2005/Atom}entry')
-    entry_delimiter = json_data[category]
+def retrieve_authors(entry):
+    authors = []
+    all_authors_xml = retrieve_xml_children(entry,"author")
+    for author in all_authors_xml:
+        authors_name = retrieve_xml_children(author, "name")
+        for author_name in authors_name:
+            authors.append(author_name.text)
+    authors_string =  ", ".join(authors)
+    return authors_string
 
-    for idx,entry in enumerate(entries):
-        id_element = entry.findall('{http://www.w3.org/2005/Atom}id')
-        paper_id = id_element[0].text.split(".")[2]
+def add_metadata_to_pdf(pdf_path, title, authors):
+    file_in = open(pdf_path, "rb")
+    reader = PdfFileReader(file_in)
+    writer = PdfFileWriter()
 
-        if idx == 0:
-            first_id = paper_id
+    writer.appendPagesFromReader(reader)
+    metadata = reader.getDocumentInfo()
+    writer.addMetadata(metadata)
 
-        if paper_id == json_data[category]:
-            break
+    writer.addMetadata({
+        '/Title':title,
+        '/Author': authors
+    })
 
-        title_element = entry.findall('{http://www.w3.org/2005/Atom}title')
-        paper_title = title_element[0].text
+    file_out = open(pdf_path, 'ab')
+    writer.write(file_out)
 
-        pdf_element = entry.findall('{http://www.w3.org/2005/Atom}link[@title="pdf"]')
-        pdf_url = pdf_element[0].attrib.get("href")
+    file_in.close()
+    file_out.close()
+    
 
-        print("Downloading " +paper_id)
-        urllib.request.urlretrieve(pdf_url, category_path+"/arxiv_"+paper_id+".pdf")
+if __name__ == "__main__":
+    max_results = str(10)
+
+    raw_data = open(json_path).read()
+    json_data = json.loads(raw_data)
+
+    json_data["last_updated"]=str(datetime.now())
+
+    for category in list_of_categories:
+        category_path = "./pdfs/"+category
+        if not os.path.isdir(category_path):
+            os.makedirs(category_path)
+        url = "http://export.arxiv.org/api/query?search_query=cat:"+category+"&start=0&max_results="+max_results+"&sortBy=submittedDate&sortOrder=descending"
+        data = urllib.request.urlopen(url).read()
+
+        print("Retrieving " + category)
+        arxiv_xml_name = "arxiv_"+category+".xml"
+        with open(arxiv_xml_name, "w") as arxiv:
+            arxiv.write(data.decode("utf-8"))
+        tree = ET.parse(arxiv_xml_name)
+        root = tree.getroot()
+        entries = retrieve_xml_children(root, "entry") 
+        entry_delimiter = json_data[category]
+
+        for idx,entry in enumerate(entries):
+            id_element = retrieve_xml_children(entry,"id")
+            paper_id = id_element[0].text.split(".")[2]
+
+            if paper_id == entry_delimiter:
+                break
+
+            if idx == 0:
+                json_data[category] = paper_id
+
+            title_element = retrieve_xml_children(entry,'title')
+            paper_title = title_element[0].text.replace('\n', " ")
+
+            paper_authors = retrieve_authors(entry)
+        
+            pdf_element = retrieve_xml_children(entry,'link[@title="pdf"]')
+            paper_url = pdf_element[0].attrib.get("href")
+
+            print("Downloading " +paper_id)
+            path_to_download_paper = category_path+"/arxiv_"+paper_id+".pdf"
+
+            urllib.request.urlretrieve(paper_url, path_to_download_paper)
+            add_metadata_to_pdf(path_to_download_paper, paper_title, paper_authors)
+            time.sleep(4)
+
+        if os.path.exists(arxiv_xml_name):
+            os.remove(arxiv_xml_name)
+
         time.sleep(4)
-    json_data[category] = first_id
-    time.sleep(4) 
-    if os.path.exists(arxiv_xml_name):
-        os.remove(arxiv_xml_name)
-with open(json_path,"w") as jsonFile:
-    json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
+
+    with open(json_path,"w") as jsonFile:
+        json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
+
