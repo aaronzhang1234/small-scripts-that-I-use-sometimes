@@ -8,8 +8,10 @@ import json
 
 max_results = str(10)
 
-raw_data = open("arxiv.json").read()
+json_path = "arxiv.json"
+raw_data = open(json_path).read()
 json_data = json.loads(raw_data)
+
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
 json_data["last_updated"]=str(datetime.now())
 
@@ -52,5 +54,5 @@ for category in list_of_categories:
     time.sleep(4) 
     if os.path.exists(arxiv_xml_name):
         os.remove(arxiv_xml_name)
-with open("arxiv.json","w") as jsonFile:
+with open(json_path,"w") as jsonFile:
     json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
