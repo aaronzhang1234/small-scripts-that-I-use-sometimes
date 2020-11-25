@@ -1,6 +1,6 @@
 emojicrawler/env/*
 env/
-pdfs/
+BookRelated/pdfs/
 *.xml
 .vscode
-
+.DS_Store
