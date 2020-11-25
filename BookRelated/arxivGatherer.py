@@ -8,6 +8,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
 json_path = "arxiv.json"
+max_results = str(1)
 
 def retrieve_xml_children(root, child_element):
     xpath_search = "{http://www.w3.org/2005/Atom}"+child_element
@@ -29,8 +30,8 @@ def add_metadata_to_pdf(pdf_path, title, authors):
     writer = PdfFileWriter()
 
     writer.appendPagesFromReader(reader)
-    metadata = reader.getDocumentInfo()
-    writer.addMetadata(metadata)
+    #metadata = reader.getDocumentInfo()
+    #writer.addMetadata(metadata)
 
     writer.addMetadata({
         '/Title':title,
@@ -45,7 +46,6 @@ def add_metadata_to_pdf(pdf_path, title, authors):
     
 
 if __name__ == "__main__":
-    max_results = str(10)
 
     raw_data = open(json_path).read()
     json_data = json.loads(raw_data)
