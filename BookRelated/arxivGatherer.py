@@ -8,7 +8,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
 json_path = "arxiv.json"
-max_results = str(1)
+max_results = str(20)
 
 def retrieve_xml_children(root, child_element):
     xpath_search = "{http://www.w3.org/2005/Atom}"+child_element
@@ -26,7 +26,7 @@ def retrieve_authors(entry):
 
 def add_metadata_to_pdf(pdf_path, title, authors):
     file_in = open(pdf_path, "rb")
-    reader = PdfFileReader(file_in)
+    reader = PdfFileReader(file_in, strict=False)
     writer = PdfFileWriter()
 
     writer.appendPagesFromReader(reader)
@@ -59,7 +59,6 @@ if __name__ == "__main__":
         url = "http://export.arxiv.org/api/query?search_query=cat:"+category+"&start=0&max_results="+max_results+"&sortBy=submittedDate&sortOrder=descending"
         data = urllib.request.urlopen(url).read()
 
-        print("Retrieving " + category)
         arxiv_xml_name = "arxiv_"+category+".xml"
         with open(arxiv_xml_name, "w") as arxiv:
             arxiv.write(data.decode("utf-8"))
@@ -86,11 +85,13 @@ if __name__ == "__main__":
             pdf_element = retrieve_xml_children(entry,'link[@title="pdf"]')
             paper_url = pdf_element[0].attrib.get("href")
 
-            print("Downloading " +paper_id)
             path_to_download_paper = category_path+"/arxiv_"+paper_id+".pdf"
 
-            urllib.request.urlretrieve(paper_url, path_to_download_paper)
-            add_metadata_to_pdf(path_to_download_paper, paper_title, paper_authors)
+            try:
+                urllib.request.urlretrieve(paper_url, path_to_download_paper)
+                add_metadata_to_pdf(path_to_download_paper, paper_title, paper_authors)
+            except:
+                print("Error in retrieving " + paper_id)
             time.sleep(4)
 
         if os.path.exists(arxiv_xml_name):
@@ -100,4 +101,5 @@ if __name__ == "__main__":
 
     with open(json_path,"w") as jsonFile:
         json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
+    print("Arxiv gathered 🥳 ! Happy Readings 🤓")
 
