@@ -7,8 +7,9 @@ import json
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
+time_to_let_arxiv_rest = 4
 json_path = "arxiv.json"
-max_results = str(20)
+max_results = str(3)
 
 def retrieve_xml_children(root, child_element):
     xpath_search = "{http://www.w3.org/2005/Atom}"+child_element
@@ -51,6 +52,9 @@ if __name__ == "__main__":
     json_data = json.loads(raw_data)
 
     json_data["last_updated"]=str(datetime.now())
+    estimated_time = ((int(max_results) * time_to_let_arxiv_rest)) * len(list_of_categories) * 2
+
+    print("Hello! Welcome to the arxivGatherer: Gathering Arxiv since Nov 2020! 📚 \n Estimated time to completion is "+ str(estimated_time)+ " seconds")
 
     for category in list_of_categories:
         category_path = "./pdfs/"+category
@@ -92,12 +96,12 @@ if __name__ == "__main__":
                 add_metadata_to_pdf(path_to_download_paper, paper_title, paper_authors)
             except:
                 print("Error in retrieving " + paper_id)
-            time.sleep(4)
+            time.sleep(time_to_let_arxiv_rest)
 
         if os.path.exists(arxiv_xml_name):
             os.remove(arxiv_xml_name)
 
-        time.sleep(4)
+        time.sleep(time_to_let_arxiv_rest)
 
     with open(json_path,"w") as jsonFile:
         json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
