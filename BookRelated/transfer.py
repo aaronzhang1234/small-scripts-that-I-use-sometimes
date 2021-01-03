@@ -8,6 +8,7 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
 path_root = "/Volumes/KOBOeReader/"
+#path_root = "/media/pi/KOBOeReader/"
 path_to_database = path_root + ".kobo/KoboReader.sqlite"
 path_to_kobo = path_root
 

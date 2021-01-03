@@ -9,6 +9,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 list_of_categories=["cs.CE", "cs.ET", "astro-ph", "cs.RO","cs.SD", "cs.SE"]
 time_to_let_arxiv_rest = 4
 json_path = "arxiv.json"
+#json_path = "/home/pi/Documents/small-scripts-that-I-use-sometimes/BookRelated/arxiv.json"
 max_results = str(3)
 
 def retrieve_xml_children(root, child_element):
