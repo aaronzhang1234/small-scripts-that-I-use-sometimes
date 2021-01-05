@@ -32,8 +32,6 @@ def add_metadata_to_pdf(pdf_path, title, authors):
     writer = PdfFileWriter()
 
     writer.appendPagesFromReader(reader)
-    #metadata = reader.getDocumentInfo()
-    #writer.addMetadata(metadata)
 
     writer.addMetadata({
         '/Title':title,
@@ -52,6 +50,7 @@ if __name__ == "__main__":
     raw_data = open(json_path).read()
     json_data = json.loads(raw_data)
 
+    papers_added = 0
     json_data["last_updated"]=str(datetime.now())
     estimated_time = ((int(max_results) * time_to_let_arxiv_rest)) * len(list_of_categories) * 2
 
@@ -95,6 +94,7 @@ if __name__ == "__main__":
             try:
                 urllib.request.urlretrieve(paper_url, path_to_download_paper)
                 add_metadata_to_pdf(path_to_download_paper, paper_title, paper_authors)
+                papers_added = papers_added+1
             except:
                 print("Error in retrieving " + paper_id)
             time.sleep(time_to_let_arxiv_rest)
@@ -106,5 +106,5 @@ if __name__ == "__main__":
 
     with open(json_path,"w") as jsonFile:
         json.dump(json_data, jsonFile, sort_keys=True, indent = 4)
-    print("Arxiv gathered 🥳 ! Happy Readings 🤓")
+    print("Arxiv gathered 🥳! We got "+str(papers_added) +" paper(s)! Happy Readings 🤓")
 

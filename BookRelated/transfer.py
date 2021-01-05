@@ -4,8 +4,6 @@ import shutil
 import random
 import os 
 from os import path as os_path
-from tkinter import Tk
-from tkinter.filedialog import askopenfilename
 
 path_root = "/Volumes/KOBOeReader/"
 #path_root = "/media/pi/KOBOeReader/"
@@ -37,9 +35,7 @@ def add_shelf(shelf_name=""):
     conn.close()
 
 def add_book():
-    Tk().withdraw
-    filename = askopenfilename()
-    print(filename)
+    print("Work in Progress")
 
 def add_all_papers():
     for path,subdirs, files in os.walk("./pdfs"):
