@@ -7,6 +7,10 @@ db = client.heartbeat
 OAUTH_TOKEN = <OAUTH_TOKEN_HERE>
 headers={"Authorization":"Bearer "+OAUTH_TOKEN, "Content-Type":"application/json"}
 
+USER_OAUTH_TOKEN = <GODDAMNED_SPOTIFY_JUST_LET_ME_USE_A_SINGLE_TOKEN> 
+user_headers={"Authorization":"Bearer "+USER_OAUTH_TOKEN, "Content-Type":"application/json"}
+
+
 def get_music_and_save_tracks():
     playlist_ids = get_playlist_ids()
     for playlist_id in playlist_ids:
@@ -59,15 +63,23 @@ def get_track_tempos(tracks):
             result = db.audiofeature.insert_one(item)
             print("Inserting feature : " + str(item["id"]))
 
-def get_track_with_closest_tempo(tempo):
+def play_track_with_closest_tempo(tempo):
     track = db.audiofeature.aggregate([
         {"$project": {"diff": {"$abs": {"$subtract": [tempo, "$tempo"]}},"doc": '$$ROOT'}},
         {"$sort": {"diff": 1}}, 
         {"$limit": 1} 
-    ])
-    return list(track)
+    ]) 
+    list_track = list(track)[0]
+    track_id = list_track["_id"]
+    track_metadata = db.tracks.find_one({"_id":track_id})
+    print("Playing: " + str(track_metadata["track"]["name"]) + " which has a tempo of "+ str(list_track["doc"]["tempo"]))
+    play_track(track_id)
 
+def play_track(track_id):
+    r = requests.put(url="https://api.spotify.com/v1/me/player/play", json={"uris":["spotify:track:"+track_id]}, headers=user_headers)
+    print(r.text)
+    
 
 if __name__ == "__main__":
     get_music_and_save_tracks()
-    print(get_track_with_closest_tempo(201))
+    print(play_track_with_closest_tempo(90))
