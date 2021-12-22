@@ -1,0 +1,456 @@
+{
+    "href": "https://api.spotify.com/v1/users/allpraisefor/playlists?offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/01cjcEof4IV92hZpTlcbM6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/01cjcEof4IV92hZpTlcbM6",
+        "id": "01cjcEof4IV92hZpTlcbM6",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b27354dc405a4b42f326715e454cab67616d0000b27388e576ba8eb066866bfacf39ab67616d0000b273b8901966e70f52742ddbbb05ab67616d0000b273ff1958bb541da9d3e3e847db",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b27354dc405a4b42f326715e454cab67616d0000b27388e576ba8eb066866bfacf39ab67616d0000b273b8901966e70f52742ddbbb05ab67616d0000b273ff1958bb541da9d3e3e847db",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b27354dc405a4b42f326715e454cab67616d0000b27388e576ba8eb066866bfacf39ab67616d0000b273b8901966e70f52742ddbbb05ab67616d0000b273ff1958bb541da9d3e3e847db",
+            "width": 60
+          }
+        ],
+        "name": "Various Country/Bluegrass",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MzUsZGVlMjZkYTcyZTg0MGRlZDM5ZGIwMDIzZTBjMmIzZDhiZmMxMGNhYg==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/01cjcEof4IV92hZpTlcbM6/tracks",
+          "total": 7
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:01cjcEof4IV92hZpTlcbM6"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/3jFYhlatHzC0ndxRvTDBhG"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3jFYhlatHzC0ndxRvTDBhG",
+        "id": "3jFYhlatHzC0ndxRvTDBhG",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2737209f2ed6c5edf12fb66bfdd",
+            "width": 640
+          }
+        ],
+        "name": "Real Book",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MyxlZjY4OTE4YmI4OTFhYzBjOWI5ZjYwMDg2MmM1MmYxYWU4NmU0MTBm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/3jFYhlatHzC0ndxRvTDBhG/tracks",
+          "total": 2
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3jFYhlatHzC0ndxRvTDBhG"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4Xai4EjdtyRgLsslLRibqQ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4Xai4EjdtyRgLsslLRibqQ",
+        "id": "4Xai4EjdtyRgLsslLRibqQ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b273079febd5ded0a77d42d70a55ab67616d0000b2735c9ab12d31cc2ee07fe7d0ffab67616d0000b273b2d5c5aece829ed8b5c8cd53ab67616d0000b273dcc98b3cc47fe6d6158d6072",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b273079febd5ded0a77d42d70a55ab67616d0000b2735c9ab12d31cc2ee07fe7d0ffab67616d0000b273b2d5c5aece829ed8b5c8cd53ab67616d0000b273dcc98b3cc47fe6d6158d6072",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b273079febd5ded0a77d42d70a55ab67616d0000b2735c9ab12d31cc2ee07fe7d0ffab67616d0000b273b2d5c5aece829ed8b5c8cd53ab67616d0000b273dcc98b3cc47fe6d6158d6072",
+            "width": 60
+          }
+        ],
+        "name": "instrumentals",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NTYsZjQ1MjZiZDA0NTAwZGUxMTE4MDFjMTQxMTQzMWE1YjRiMDQ2NWIwNA==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/4Xai4EjdtyRgLsslLRibqQ/tracks",
+          "total": 133
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4Xai4EjdtyRgLsslLRibqQ"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/01gitXV68C0jKRA1LNBjXm"
+        },
+        "href": "https://api.spotify.com/v1/playlists/01gitXV68C0jKRA1LNBjXm",
+        "id": "01gitXV68C0jKRA1LNBjXm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b2732ec8ab4f947e57d3ebd576c2ab67616d0000b27365885b3dbe5b287441fe6d17ab67616d0000b273953579c279935afb726d4609ab67616d0000b273b2229a8fdf377abaf3652624",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b2732ec8ab4f947e57d3ebd576c2ab67616d0000b27365885b3dbe5b287441fe6d17ab67616d0000b273953579c279935afb726d4609ab67616d0000b273b2229a8fdf377abaf3652624",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b2732ec8ab4f947e57d3ebd576c2ab67616d0000b27365885b3dbe5b287441fe6d17ab67616d0000b273953579c279935afb726d4609ab67616d0000b273b2229a8fdf377abaf3652624",
+            "width": 60
+          }
+        ],
+        "name": "hype vocals",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NjQsYjk0YmY0OGZhNzgzNGI4NDRiZGUzZDA2ODExM2FiOTg1MjZmNDUyZQ==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/01gitXV68C0jKRA1LNBjXm/tracks",
+          "total": 38
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:01gitXV68C0jKRA1LNBjXm"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/63KE6slQEdvCN1poOFblQR"
+        },
+        "href": "https://api.spotify.com/v1/playlists/63KE6slQEdvCN1poOFblQR",
+        "id": "63KE6slQEdvCN1poOFblQR",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b2730f1dff6a1935bf648c2cbfb4ab67616d0000b2734b5454b8ba8c4f8b8ea79e9cab67616d0000b27381052badd62d5e14c3377786ab67616d0000b273ea34552ad2126a956d6dc19a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b2730f1dff6a1935bf648c2cbfb4ab67616d0000b2734b5454b8ba8c4f8b8ea79e9cab67616d0000b27381052badd62d5e14c3377786ab67616d0000b273ea34552ad2126a956d6dc19a",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b2730f1dff6a1935bf648c2cbfb4ab67616d0000b2734b5454b8ba8c4f8b8ea79e9cab67616d0000b27381052badd62d5e14c3377786ab67616d0000b273ea34552ad2126a956d6dc19a",
+            "width": 60
+          }
+        ],
+        "name": "aesthetic",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MzEsYjIwY2EzOWIwMWIwNTZkYmY0MjhmMDNlNmQxNDgxYmM1MjNhYWIzMw==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/63KE6slQEdvCN1poOFblQR/tracks",
+          "total": 26
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:63KE6slQEdvCN1poOFblQR"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/2KRhh6zN1KMkNaA3bHbZOV"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2KRhh6zN1KMkNaA3bHbZOV",
+        "id": "2KRhh6zN1KMkNaA3bHbZOV",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb94161ba72e63dd37d0400fff",
+            "width": null
+          }
+        ],
+        "name": "fast",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NDQsZTkxYmY3ZTAyZDdhNmZhNTYzZWYzNTcyMzg4MGI5YzE3ZjlhZDUzMA==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/2KRhh6zN1KMkNaA3bHbZOV/tracks",
+          "total": 35
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2KRhh6zN1KMkNaA3bHbZOV"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/4pvZbDbgSnsAGlOg5u5x3R"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4pvZbDbgSnsAGlOg5u5x3R",
+        "id": "4pvZbDbgSnsAGlOg5u5x3R",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b27334b99ef75a041e29b31c3493ab67616d0000b27378c2fcdaa1e8d56c6d2a3b2eab67616d0000b273e36696e8e6293e81f03b10d3ab67616d0000b273f4445d4d3f72f3d2621ed47b",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b27334b99ef75a041e29b31c3493ab67616d0000b27378c2fcdaa1e8d56c6d2a3b2eab67616d0000b273e36696e8e6293e81f03b10d3ab67616d0000b273f4445d4d3f72f3d2621ed47b",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b27334b99ef75a041e29b31c3493ab67616d0000b27378c2fcdaa1e8d56c6d2a3b2eab67616d0000b273e36696e8e6293e81f03b10d3ab67616d0000b273f4445d4d3f72f3d2621ed47b",
+            "width": 60
+          }
+        ],
+        "name": "cozy feel",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MjksMjVmNThjOGZhYjk0YTIzOGQ0MjVlYjE2ZDMxMDYzOTQzMzQ4MGQ0Ng==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/4pvZbDbgSnsAGlOg5u5x3R/tracks",
+          "total": 22
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4pvZbDbgSnsAGlOg5u5x3R"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/2Vl4y2rNJyX9lfTnDpIt9j"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2Vl4y2rNJyX9lfTnDpIt9j",
+        "id": "2Vl4y2rNJyX9lfTnDpIt9j",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb5b6e484701c98c9d6cedb4f9",
+            "width": null
+          }
+        ],
+        "name": "Fire4🔥",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NTMsMDBkZWQ1YzkyM2M5MDY1MDRhNDg1OTI0NmJiN2ViNjFhM2Y4NTQ5NA==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/2Vl4y2rNJyX9lfTnDpIt9j/tracks",
+          "total": 34
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2Vl4y2rNJyX9lfTnDpIt9j"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/6ZgTEIo4oHLYxlYouTcVXE"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6ZgTEIo4oHLYxlYouTcVXE",
+        "id": "6ZgTEIo4oHLYxlYouTcVXE",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebbf68eba146893f44af1be45ee",
+            "width": null
+          }
+        ],
+        "name": "Fire1🔥",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NjMsYWY1NmY4NmI1MTNlMWNlNTJkZmM4ZmIyNjJjNjQyZGVkZjJiMWFmNw==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/6ZgTEIo4oHLYxlYouTcVXE/tracks",
+          "total": 41
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6ZgTEIo4oHLYxlYouTcVXE"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/3bPM19JI0CMwZCyaZTiOFt"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3bPM19JI0CMwZCyaZTiOFt",
+        "id": "3bPM19JI0CMwZCyaZTiOFt",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb4f58e39fdf058b486e96f24b",
+            "width": null
+          }
+        ],
+        "name": "Fire2🔥",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NjQsNTE2MDc1OWFkZmY2ZDlmYjIzYmZiZmQ0Y2FjNzFhZmVkMDU3NDk5OQ==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/3bPM19JI0CMwZCyaZTiOFt/tracks",
+          "total": 38
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3bPM19JI0CMwZCyaZTiOFt"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/1xUaeNFyrh3106KoxdYEtH"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1xUaeNFyrh3106KoxdYEtH",
+        "id": "1xUaeNFyrh3106KoxdYEtH",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebbaa9709be0b25c8387ff917fb",
+            "width": null
+          }
+        ],
+        "name": "Fire3🔥",
+        "owner": {
+          "display_name": "allpraisefor",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/allpraisefor"
+          },
+          "href": "https://api.spotify.com/v1/users/allpraisefor",
+          "id": "allpraisefor",
+          "type": "user",
+          "uri": "spotify:user:allpraisefor"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "ODAsMjQyNDVkMWI1N2E5ZDE1MWI3ODk4YjI1NWE1YjJmZDdmNWNjZWU5MQ==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/1xUaeNFyrh3106KoxdYEtH/tracks",
+          "total": 44
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1xUaeNFyrh3106KoxdYEtH"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 11
+  }
