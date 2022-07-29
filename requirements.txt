@@ -26,7 +26,7 @@ pylint==2.2.2
 pyOpenSSL==18.0.0
 python-magic==0.4.15
 queuelib==1.5.0
-Scrapy==1.5.1
+Scrapy==2.6.2
 selenium==3.141.0
 service-identity==18.1.0
 six==1.12.0
